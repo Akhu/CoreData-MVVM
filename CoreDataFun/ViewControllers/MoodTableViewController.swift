@@ -9,28 +9,34 @@
 import UIKit
 import CoreData
 
-class MoodsTableViewController: UITableViewController, CoreDataContainerAware, SegueHandler {
+class MoodsTableViewController: UITableViewController, CoreDataContainerAware, SegueHandler, MVVMCoreData {
     
     enum SegueIdentifier: String {
         case showMoodDetail = "detailMood"
     }
     
-    var managedObjectContext: NSManagedObjectContext!
+    typealias Model = Mood
     
-    lazy var viewModel: MoodTableViewModel = {
-        return MoodTableViewModel(self.tableView, moc: managedObjectContext)
-    }()
+    @IBOutlet weak var addMoodButton: UIBarButtonItem!
+    var cellIdentifier: String = "MoodCell"
+    var managedObjectContext: NSManagedObjectContext!
+    var viewModel: MoodTableViewModel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bindViewModel()
-    }
-    
-    func bindViewModel() {
+        self.viewModel = MoodTableViewModel(self.tableView, moc: self.managedObjectContext) //Handle all of our Data
         
     }
     
-    // MARK: Private
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //self.viewModel.moodActionStatus
+    }
+    
+    
     //var dataSource: TableViewDataSource<MoodsTableViewController>!
     @IBAction func addMoodAction(_ sender: UIBarButtonItem) {
         self.viewModel.addMood()
@@ -45,3 +51,5 @@ class MoodsTableViewController: UITableViewController, CoreDataContainerAware, S
         }
     }
 }
+
+

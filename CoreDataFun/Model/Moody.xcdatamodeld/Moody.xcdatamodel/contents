@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14270.9" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Continent" representedClassName="Continent" parentEntity="Region" syncable="YES">
+        <relationship name="countries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Country" inverseName="continent" inverseEntity="Country" syncable="YES"/>
+    </entity>
+    <entity name="Country" representedClassName="Country" parentEntity="Region" syncable="YES">
+        <relationship name="continent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Continent" inverseName="countries" inverseEntity="Continent" syncable="YES"/>
+        <relationship name="mood" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Mood" inverseName="country" inverseEntity="Mood" syncable="YES"/>
+    </entity>
+    <entity name="Mood" representedClassName=".Mood" syncable="YES">
+        <attribute name="colors" attributeType="Transformable" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="country" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="mood" inverseEntity="Country" syncable="YES"/>
+    </entity>
+    <entity name="Region" representedClassName="Region" isAbstract="YES" syncable="YES">
+        <attribute name="numericISO3166Code" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Continent" positionX="844.5078125" positionY="-325.90625" width="128" height="60"/>
+        <element name="Country" positionX="543.5" positionY="-325.640625" width="128" height="75"/>
+        <element name="Mood" positionX="160.78515625" positionY="-427.39453125" width="128" height="90"/>
+        <element name="Region" positionX="694.22265625" positionY="-915.23828125" width="128" height="75"/>
+    </elements>
+</model>

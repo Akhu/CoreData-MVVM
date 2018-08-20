@@ -10,16 +10,25 @@
 		9220CA9220CD6B1800EF9BE8 /* MoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CA9120CD6B1800EF9BE8 /* MoodDetailViewController.swift */; };
 		9220CA9420CD741800EF9BE8 /* ManagedObjectObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CA9320CD741800EF9BE8 /* ManagedObjectObserver.swift */; };
 		9220CA9620CD75F200EF9BE8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CA9520CD75F200EF9BE8 /* Utilities.swift */; };
-		9220CA9820CD817200EF9BE8 /* MoodTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CA9720CD817200EF9BE8 /* MoodTableViewModel.swift */; };
+		9220CA9820CD817200EF9BE8 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CA9720CD817200EF9BE8 /* TableViewModel.swift */; };
+		9220CA9A20CD904A00EF9BE8 /* MVVMCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CA9920CD904A00EF9BE8 /* MVVMCoreData.swift */; };
 		925B426420C7FCF200445356 /* MoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925B426320C7FCF200445356 /* MoodTableViewCell.swift */; };
 		925B426620C800CF00445356 /* ManagedObjectHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925B426520C800CF00445356 /* ManagedObjectHelpers.swift */; };
 		925B426820C8035900445356 /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925B426720C8035900445356 /* UIImageColors.swift */; };
+		92788D1B20D05D1F00626169 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92788D1A20D05D1F00626169 /* Country.swift */; };
+		92788D1D20D05E7700626169 /* ISO3166.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92788D1C20D05E7700626169 /* ISO3166.swift */; };
+		92788D1F20D05F4200626169 /* Continent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92788D1E20D05F4200626169 /* Continent.swift */; };
+		92788D8420D05F7300626169 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92788D8020D05F7300626169 /* Localizable.strings */; };
+		92788D8520D05F7300626169 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 92788D8120D05F7300626169 /* Localizable.stringsdict */; };
+		92788D8620D05F7300626169 /* LocalizedStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92788D8220D05F7300626169 /* LocalizedStringConvertible.swift */; };
+		92788D8720D05F7300626169 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92788D8320D05F7300626169 /* Localizable.swift */; };
 		927A3E0920C6F74E0088255E /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A3E0820C6F74E0088255E /* Mood.swift */; };
 		927A3E0C20C6FA1B0088255E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A3E0B20C6FA1B0088255E /* CoreDataStack.swift */; };
 		927A3E0F20C7051E0088255E /* MoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A3E0E20C7051E0088255E /* MoodTableViewController.swift */; };
 		927A3E1120C706880088255E /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A3E1020C706880088255E /* SegueHandler.swift */; };
 		927A3E1320C708AB0088255E /* CoreDataContainerAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A3E1220C708AB0088255E /* CoreDataContainerAware.swift */; };
 		927A3E1620C70CE20088255E /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A3E1520C70CE20088255E /* TableViewDataSource.swift */; };
+		9281FCDF20D06FAB0008DB89 /* GeoLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281FCDE20D06FAB0008DB89 /* GeoLocationController.swift */; };
 		92D598C720C6F311008951B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D598C620C6F311008951B2 /* AppDelegate.swift */; };
 		92D598C920C6F311008951B2 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D598C820C6F311008951B2 /* RootNavigationController.swift */; };
 		92D598CC20C6F311008951B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D598CA20C6F311008951B2 /* Main.storyboard */; };
@@ -33,16 +42,25 @@
 		9220CA9120CD6B1800EF9BE8 /* MoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDetailViewController.swift; sourceTree = "<group>"; };
 		9220CA9320CD741800EF9BE8 /* ManagedObjectObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectObserver.swift; sourceTree = "<group>"; };
 		9220CA9520CD75F200EF9BE8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		9220CA9720CD817200EF9BE8 /* MoodTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewModel.swift; sourceTree = "<group>"; };
+		9220CA9720CD817200EF9BE8 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		9220CA9920CD904A00EF9BE8 /* MVVMCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMCoreData.swift; sourceTree = "<group>"; };
 		925B426320C7FCF200445356 /* MoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewCell.swift; sourceTree = "<group>"; };
 		925B426520C800CF00445356 /* ManagedObjectHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectHelpers.swift; sourceTree = "<group>"; };
 		925B426720C8035900445356 /* UIImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
+		92788D1A20D05D1F00626169 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		92788D1C20D05E7700626169 /* ISO3166.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO3166.swift; sourceTree = "<group>"; };
+		92788D1E20D05F4200626169 /* Continent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continent.swift; sourceTree = "<group>"; };
+		92788D8020D05F7300626169 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		92788D8120D05F7300626169 /* Localizable.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
+		92788D8220D05F7300626169 /* LocalizedStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStringConvertible.swift; sourceTree = "<group>"; };
+		92788D8320D05F7300626169 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		927A3E0820C6F74E0088255E /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		927A3E0B20C6FA1B0088255E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		927A3E0E20C7051E0088255E /* MoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewController.swift; sourceTree = "<group>"; };
 		927A3E1020C706880088255E /* SegueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
 		927A3E1220C708AB0088255E /* CoreDataContainerAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContainerAware.swift; sourceTree = "<group>"; };
 		927A3E1520C70CE20088255E /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		9281FCDE20D06FAB0008DB89 /* GeoLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLocationController.swift; sourceTree = "<group>"; };
 		92D598C320C6F311008951B2 /* CoreDataFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D598C620C6F311008951B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D598C820C6F311008951B2 /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
@@ -73,10 +91,25 @@
 			path = VIew;
 			sourceTree = "<group>";
 		};
+		92788D8820D05F7C00626169 /* Localisation */ = {
+			isa = PBXGroup;
+			children = (
+				92788D8020D05F7300626169 /* Localizable.strings */,
+				92788D8120D05F7300626169 /* Localizable.stringsdict */,
+				92788D8320D05F7300626169 /* Localizable.swift */,
+				92788D8220D05F7300626169 /* LocalizedStringConvertible.swift */,
+			);
+			path = Localisation;
+			sourceTree = "<group>";
+		};
 		927A3E0720C6F7400088255E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				92D598D820C6F3C4008951B2 /* Moody.xcdatamodeld */,
 				927A3E0820C6F74E0088255E /* Mood.swift */,
+				92788D1A20D05D1F00626169 /* Country.swift */,
+				92788D1C20D05E7700626169 /* ISO3166.swift */,
+				92788D1E20D05F4200626169 /* Continent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -86,12 +119,8 @@
 			children = (
 				927A3E0B20C6FA1B0088255E /* CoreDataStack.swift */,
 				927A3E1220C708AB0088255E /* CoreDataContainerAware.swift */,
-				927A3E1020C706880088255E /* SegueHandler.swift */,
 				925B426520C800CF00445356 /* ManagedObjectHelpers.swift */,
-				925B426720C8035900445356 /* UIImageColors.swift */,
-				92E0E48820CD620000D31294 /* DateExtension.swift */,
 				9220CA9320CD741800EF9BE8 /* ManagedObjectObserver.swift */,
-				9220CA9520CD75F200EF9BE8 /* Utilities.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -109,9 +138,21 @@
 			isa = PBXGroup;
 			children = (
 				927A3E1520C70CE20088255E /* TableViewDataSource.swift */,
-				9220CA9720CD817200EF9BE8 /* MoodTableViewModel.swift */,
+				9220CA9720CD817200EF9BE8 /* TableViewModel.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		9281FCDD20D06F800008DB89 /* StandardsTools */ = {
+			isa = PBXGroup;
+			children = (
+				927A3E1020C706880088255E /* SegueHandler.swift */,
+				925B426720C8035900445356 /* UIImageColors.swift */,
+				92E0E48820CD620000D31294 /* DateExtension.swift */,
+				9220CA9520CD75F200EF9BE8 /* Utilities.swift */,
+				9281FCDE20D06FAB0008DB89 /* GeoLocationController.swift */,
+			);
+			path = StandardsTools;
 			sourceTree = "<group>";
 		};
 		92D598BA20C6F311008951B2 = {
@@ -133,18 +174,20 @@
 		92D598C520C6F311008951B2 /* CoreDataFun */ = {
 			isa = PBXGroup;
 			children = (
+				9281FCDD20D06F800008DB89 /* StandardsTools */,
 				925B426220C7FCE000445356 /* VIew */,
 				927A3E1420C70CCE0088255E /* DataSource */,
 				927A3E0D20C7050A0088255E /* ViewControllers */,
 				927A3E0A20C6FA0D0088255E /* Helpers */,
 				927A3E0720C6F7400088255E /* Model */,
+				92788D8820D05F7C00626169 /* Localisation */,
 				92D598C620C6F311008951B2 /* AppDelegate.swift */,
 				92D598C820C6F311008951B2 /* RootNavigationController.swift */,
 				92D598CA20C6F311008951B2 /* Main.storyboard */,
 				92D598CD20C6F313008951B2 /* Assets.xcassets */,
 				92D598CF20C6F313008951B2 /* LaunchScreen.storyboard */,
 				92D598D220C6F313008951B2 /* Info.plist */,
-				92D598D820C6F3C4008951B2 /* Moody.xcdatamodeld */,
+				9220CA9920CD904A00EF9BE8 /* MVVMCoreData.swift */,
 			);
 			path = CoreDataFun;
 			sourceTree = "<group>";
@@ -192,6 +235,8 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				da,
 			);
 			mainGroup = 92D598BA20C6F311008951B2;
 			productRefGroup = 92D598C420C6F311008951B2 /* Products */;
@@ -209,7 +254,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				92D598D120C6F313008951B2 /* LaunchScreen.storyboard in Resources */,
+				92788D8420D05F7300626169 /* Localizable.strings in Resources */,
 				92D598CE20C6F313008951B2 /* Assets.xcassets in Resources */,
+				92788D8520D05F7300626169 /* Localizable.stringsdict in Resources */,
 				92D598CC20C6F311008951B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,20 +270,27 @@
 			files = (
 				927A3E1620C70CE20088255E /* TableViewDataSource.swift in Sources */,
 				927A3E0C20C6FA1B0088255E /* CoreDataStack.swift in Sources */,
+				92788D8720D05F7300626169 /* Localizable.swift in Sources */,
 				927A3E0920C6F74E0088255E /* Mood.swift in Sources */,
 				925B426620C800CF00445356 /* ManagedObjectHelpers.swift in Sources */,
 				927A3E0F20C7051E0088255E /* MoodTableViewController.swift in Sources */,
+				92788D1F20D05F4200626169 /* Continent.swift in Sources */,
 				92E0E48920CD620000D31294 /* DateExtension.swift in Sources */,
 				9220CA9620CD75F200EF9BE8 /* Utilities.swift in Sources */,
+				92788D1B20D05D1F00626169 /* Country.swift in Sources */,
 				927A3E1120C706880088255E /* SegueHandler.swift in Sources */,
-				9220CA9820CD817200EF9BE8 /* MoodTableViewModel.swift in Sources */,
+				92788D8620D05F7300626169 /* LocalizedStringConvertible.swift in Sources */,
+				9220CA9820CD817200EF9BE8 /* TableViewModel.swift in Sources */,
 				92D598C920C6F311008951B2 /* RootNavigationController.swift in Sources */,
+				92788D1D20D05E7700626169 /* ISO3166.swift in Sources */,
 				925B426420C7FCF200445356 /* MoodTableViewCell.swift in Sources */,
 				927A3E1320C708AB0088255E /* CoreDataContainerAware.swift in Sources */,
 				9220CA9220CD6B1800EF9BE8 /* MoodDetailViewController.swift in Sources */,
 				925B426820C8035900445356 /* UIImageColors.swift in Sources */,
 				92D598C720C6F311008951B2 /* AppDelegate.swift in Sources */,
 				92D598DA20C6F3C4008951B2 /* Moody.xcdatamodeld in Sources */,
+				9220CA9A20CD904A00EF9BE8 /* MVVMCoreData.swift in Sources */,
+				9281FCDF20D06FAB0008DB89 /* GeoLocationController.swift in Sources */,
 				9220CA9420CD741800EF9BE8 /* ManagedObjectObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

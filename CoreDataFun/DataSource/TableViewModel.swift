@@ -22,12 +22,27 @@ class MoodTableViewModel: CoreDataContainerAware {
     
     var dataSource:TableViewDataSource<MoodTableViewModel>!
     
+    var moodActionStatus: ((_ status: Bool) -> ())?
+    
+    fileprivate var geoLocationController:GeoLocation!
+    
+    fileprivate var readyToMood:Bool! {
+        didSet {
+            guard moodActionStatus != nil else { return }
+            self.moodActionStatus!(readyToMood)
+        }
+    }
+    
+    
     
     init(_ tableView: UITableView, moc: NSManagedObjectContext,  cellIdentifier: String = "MoodCell") {
         self.cellIdentifier = cellIdentifier
         self.tableView = tableView
         self.managedObjectContext = moc
         self.setupTableView()
+        
+        self.geoLocationController = GeoLocation(delegate: self)
+        
         self.tableView.reloadData()
     }
     
@@ -43,28 +58,36 @@ class MoodTableViewModel: CoreDataContainerAware {
         self.dataSource = TableViewDataSource(tableView: self.tableView, cellIdentifier: self.cellIdentifier, fetchedResultsController: fetchResultController, delegate: self)
     }
     
-    var selectedObject: Mood? {
-        get {
-            guard let object = self.dataSource.selectedObject else { return nil }
-            return object
-        }
+    var selectedObject:Mood? {
+        return self.dataSource.selectedObject
     }
+    
     
     func addMood(){
         guard let image = UIImage(named: "imageTest") else { return }
         
-        image.getColors { colors in
-            print(colors.primary)
-        }
+        self.geoLocationController.gettingLocation(gotLocation: { (location, placemark) in
+            
+            image.getColors { colors in
+                print(colors.primary)
+            }
+            
+            self.managedObjectContext.performChanges {
+                _ = Mood.insert(into: self.managedObjectContext, image: image, location: location, placemark: placemark)
+            }
+        })
         
-        managedObjectContext.performChanges {
-            _ = Mood.insert(into: self.managedObjectContext, image: image)
-        }
     }
 }
 
 extension MoodTableViewModel: TableViewDataSourceDelegate {
     func configure(_ cell: MoodTableViewCell, for object: Mood) {
         cell.configure(for: object)
+    }
+}
+
+extension MoodTableViewModel: GeoLocationDelegate {
+    func geoLocationDidChangeAuthorizationStatus(authorized: Bool) {
+        self.readyToMood = authorized
     }
 }

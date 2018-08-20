@@ -65,6 +65,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addMoodButton" destination="n0N-s5-BzS" id="x2a-9H-urM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="91F-bt-92K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

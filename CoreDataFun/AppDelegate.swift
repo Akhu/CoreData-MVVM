@@ -23,16 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CoreDataStack.createMoodyContainer { (container) in
             self.persistentContainer = container
             let context = container.viewContext
-            print(context.hasChanges)
-            print(context.persistentStoreCoordinator.debugDescription)
             self.window = UIWindow(frame: UIScreen.main.bounds)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let vc = storyboard.instantiateViewController(withIdentifier: "RootNavigationController") as? RootNavigationController else { fatalError("Cannot instanciate rootviewController" )}
             vc.managedObjectContext = context
-            print(vc.debugDescription)
             vc.attributeContextToChild()
             self.window?.rootViewController = vc
-            print(vc.managedObjectContext?.debugDescription)
+            
             self.window?.makeKeyAndVisible()
             
         }
